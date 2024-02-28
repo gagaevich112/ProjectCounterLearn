@@ -6,21 +6,21 @@ import java.io.Serializable;
 public class Counter implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-    private int count;
+    private int value;
 
-    public Counter() {
-        this.count = 0;
-    }
-
-    public void increment() {
-        count++;
-    }
-
-    public void reset() {
-        count = 0;
+    public Counter(int value) {
+        this.value = value;
     }
 
     public int getCount() {
-        return count;
+        return value;
+    }
+
+    public void increment() {
+        value++;
+    }
+
+    public void reset() {
+        value = 0;
     }
 }
